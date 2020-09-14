@@ -232,6 +232,12 @@ namespace StomatoloskaOrdinacija.WebAPI.Services
 
         public override Model.Korisnici Update(int id, KorisniciUpdateRequest request)
         {
+            var provjera = _context.Korisnici.FirstOrDefault(i => i.Email == request.Email && i.KorisnikId != id);
+            if (provjera != null)
+            {
+                throw new UserException("Email se vec koristi!");
+            }
+
             var entity = _context.Korisnici.Find(id);
             var exSlika=request.Slika;
             if (request.Slika == null)
@@ -355,6 +361,11 @@ namespace StomatoloskaOrdinacija.WebAPI.Services
         }
         public Model.Pacijent Update(int id, KorisniciPacijentUpdateRequest request)
         {
+            var provjera = _context.Korisnici.FirstOrDefault(i => i.Email == request.Email && i.KorisnikId != id);
+            if (provjera != null)
+            {
+                throw new UserException("Email se vec koristi!");
+            }
             var korisnik = _context.Korisnici.Find(id);
             var pacijent = _context.Pacijents.FirstOrDefault(i => i.KorisnikId == korisnik.KorisnikId);
 
@@ -371,12 +382,22 @@ namespace StomatoloskaOrdinacija.WebAPI.Services
             //update tabelu pacijent
             _mapper.Map(request, pacijent);
             korisnik.Slika = exSlika;
-            if (request.Password != request.PasswordConfirm)
+            //if (request.Password != request.PasswordConfirm)
+            //{
+            //    throw new UserException("Password i potvrda se ne slažu!");
+            //}
+            //korisnik.LozinkaSalt = GenerateSalt();
+            //korisnik.LozinkaHash = GenerateHash(korisnik.LozinkaSalt, request.Password);
+
+            if (!string.IsNullOrWhiteSpace(request.Password))
             {
-                throw new UserException("Password i potvrda se ne slažu!");
+                if (request.Password != request.PasswordConfirm)
+                {
+                    throw new UserException("Password i potvrda se ne slažu!");
+                }
+                korisnik.LozinkaSalt = GenerateSalt();
+                korisnik.LozinkaHash = GenerateHash(korisnik.LozinkaSalt, request.Password);
             }
-            korisnik.LozinkaSalt = GenerateSalt();
-            korisnik.LozinkaHash = GenerateHash(korisnik.LozinkaSalt, request.Password);
 
             _context.SaveChanges();
 
@@ -396,6 +417,11 @@ namespace StomatoloskaOrdinacija.WebAPI.Services
 
         public Model.KorisnikPacijent UpdateKorisniciPacijent(int id, KorisniciPacijentUpdateRequest request)
         {
+            var provjera = _context.Korisnici.FirstOrDefault(i => i.Email == request.Email && i.KorisnikId != id);
+            if (provjera != null)
+            {
+                throw new UserException("Email se vec koristi!");
+            }
             var korisnik = _context.Korisnici.Find(id);
             var pacijent = _context.Pacijents.FirstOrDefault(i => i.KorisnikId == korisnik.KorisnikId);
 
@@ -416,11 +442,22 @@ namespace StomatoloskaOrdinacija.WebAPI.Services
                 throw new UserException("Password i potvrda se ne slažu!");
             }
 
-            if (request.Password != null)
+            //if (request.Password != null)
+            //{
+            //    korisnik.LozinkaSalt = GenerateSalt();
+            //    korisnik.LozinkaHash = GenerateHash(korisnik.LozinkaSalt, request.Password);
+            //}
+
+            if (!string.IsNullOrWhiteSpace(request.Password))
             {
+                if (request.Password != request.PasswordConfirm)
+                {
+                    throw new UserException("Password i potvrda se ne slažu!");
+                }
                 korisnik.LozinkaSalt = GenerateSalt();
                 korisnik.LozinkaHash = GenerateHash(korisnik.LozinkaSalt, request.Password);
             }
+
 
             _context.SaveChanges();
 
