@@ -1,5 +1,5 @@
 # Stomatološka ordinacija
-# https://github.com/sinansubara/StomatoloskaOrdinacija
+# https://github.com/sinansubara/StomatoloskaOrdinacijaDocker
 
 # 
 # Username: Administrator | Password: test
@@ -8,8 +8,9 @@
 # Pacijent | Password: test
 #
 
-# Odraditi restore baze ili preko .bak ili preko.mdf i .ldf fajlova
-# Docker nije testiran, vjerovatno nije u funkciji, jer ne mogu pokrenut docker program
+# Za testiranje aplikacije, treba pokrenuti WebApi preko dockera
+# Odraditi "docker-compose build"
+# Nakon toga "docker-compose up"
 # Dodatni Admin acc Username: subarasinan | Password: test
 # --------------------------------------------------------------
 
