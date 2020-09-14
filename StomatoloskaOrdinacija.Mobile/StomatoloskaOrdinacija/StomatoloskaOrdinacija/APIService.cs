@@ -25,7 +25,7 @@ namespace StomatoloskaOrdinacija
         private string _apiUrl = "http://localhost:58555/api";
 #endif
 #if RELEASE
-        private string _apiUrl = "http://localhost:55745/api";
+        private string _apiUrl = "http://localhost:58555/api";
 #endif
 
 
