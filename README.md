@@ -1,23 +1,25 @@
 # Stomatološka ordinacija
 > https://github.com/sinansubara/StomatoloskaOrdinacijaDocker
 
+# Pristupni podaci za desktop aplikaciju(WinUI)
+## Username: Administrator | Password: test
+## MedicinskoOsoblje | Password: test
+## Stomatolog | Password: test
 
-# Username: Administrator | Password: test
-# MedicinskoOsoblje | Password: test
-# Stomatolog | Password: test
-# Pacijent | Password: test
+# Pristupni podaci za mobilnu aplikaciju(UWP)
+## Pacijent | Password: test
 
 #####################################################################################
-# Za testiranje, prvo treba pokrenuti WebApi preko dockera
+## Za testiranje, prvo treba pokrenuti WebApi preko dockera
 > 1. Odraditi "docker-compose build"
 > 2. Nakon toga "docker-compose up"
 > 3. Kada server bude pokrenut, pokrenemo u visual studiu WinUI(Desktop) ili UWP(Mobile) projekt
 
-# Ako se desi error pri pokretanju dockera(docker-compose up), drugi način za testiranje je, da u set startup projects, stavimo API, UWP i WinUI
+## Ako se desi error pri pokretanju dockera(docker-compose up), drugi način za testiranje je, da u set startup projects, stavimo API, UWP i WinUI
 > Automatski će se generisati baza podataka na localhostu, bilo da se pokrene preko dockera ili direktno iz visual studia
 ######################################################################################
 > Dodatni Admin acc Username: subarasinan | Password: test
-# --------------------------------------------------------------
+## --------------------------------------------------------------
 
 ## Za testiranje funkcionalnosti "Zaboravljena lozinka", potrebno je
 > nakon unosa maila za slanje koda(na formi za zaboravljenu lozinku),
