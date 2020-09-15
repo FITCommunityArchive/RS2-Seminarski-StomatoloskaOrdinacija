@@ -9,7 +9,7 @@
 # - Pristupni podaci za mobilnu aplikaciju(UWP)
 ## Pacijent | Password: test
 
-#####################################################################################
+######################################################################################
 ## Za testiranje, prvo treba pokrenuti WebApi preko dockera
 > 1. Odraditi "docker-compose build"
 > 2. Nakon toga "docker-compose up"
