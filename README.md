@@ -17,8 +17,9 @@
 
 ## Ako se desi error pri pokretanju dockera(docker-compose up), drugi način za testiranje je, da u set startup projects, stavimo API, UWP i WinUI
 > Automatski će se generisati baza podataka na localhostu, bilo da se pokrene preko dockera ili direktno iz visual studia
-######################################################################################
-> Dodatni Admin acc Username: subarasinan | Password: test
+
+
+## Dodatni Admin acc Username: subarasinan | Password: test
 ## --------------------------------------------------------------
 
 ## Za testiranje funkcionalnosti "Zaboravljena lozinka", potrebno je
