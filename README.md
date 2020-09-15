@@ -1,12 +1,12 @@
 # Stomatološka ordinacija
 > https://github.com/sinansubara/StomatoloskaOrdinacijaDocker
 
-# Pristupni podaci za desktop aplikaciju(WinUI)
+# - Pristupni podaci za desktop aplikaciju(WinUI)
 ## Username: Administrator | Password: test
 ## MedicinskoOsoblje | Password: test
 ## Stomatolog | Password: test
 
-# Pristupni podaci za mobilnu aplikaciju(UWP)
+# - Pristupni podaci za mobilnu aplikaciju(UWP)
 ## Pacijent | Password: test
 
 #####################################################################################
