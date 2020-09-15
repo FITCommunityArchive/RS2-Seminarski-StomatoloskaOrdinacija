@@ -23,22 +23,26 @@
 ## --------------------------------------------------------------
 
 ## Za testiranje funkcionalnosti "Zaboravljena lozinka", potrebno je
-> nakon unosa maila za slanje koda(na formi za zaboravljenu lozinku),
-> ući na gmail akaunt od aplikacije(pristupni podaci se nalaze u appsettings)
-> i pronaći u "SENT" dijelu zadnji poslani mail, jer svi mailovi od korisnika su izmisljeni
-> i ne mogu se isporučiti, ali ako mail postoji, naravno mail će se isporučiti na adresu.
-> Uzimanjem koda koji je poslat na adresu, popunjavamo formu za izmjenu lozinke sa tim kodom
+> 1. Nakon unosa maila za slanje koda(na formi za zaboravljenu lozinku)
+> 2. Ući na gmail akaunt od aplikacije(pristupni podaci se nalaze u appsettings)
+> 3.1. Pronaći u "SENT" dijelu zadnji poslani mail, jer svi mailovi od korisnika su izmisljeni
+> 3.2 I ne mogu se isporučiti, ali ako mail postoji, naravno mail će se isporučiti na adresu.
+> 4. Uzimanjem koda koji je poslat na adresu, popunjavamo formu za izmjenu lozinke sa tim kodom
 
 ## Za testiranje funkcionalnosti plaćanja računa
-> Koristiti kartice samo sa ovog linka https://stripe.com/docs/testing#international-cards
-> Samo one su validne za testiranje ove funkcionalnosti
+> 1. U djelu za račune se nalaze svi neplaćeni računi od pacijenta(Ako nema ni jednog računa oni se generišu odma poslije unosa pregleda u desktop dijelu)
+> 2. Izbaremo račun koji želimo platit i popunimo formu
+> 3.1. Koristiti kartice samo sa ovog linka https://stripe.com/docs/testing#international-cards
+> 3.2. Samo one su validne za testiranje ove funkcionalnosti
+> 4. Poslije toga će se generisati QR code koji treba sačuvati, da bi u ordinaciji(desktop dijelu) skenirali taj code
 
 ## Za testiranje funkcionalnosti Skeniranje QR Code
-> Trebate imati neku kameru konektovanu na PC, 
-> možete se spojiti i s telefonom preko aplikacije "iVCam"
-> Generisanje koda će se obaviti automatski nakon izvršenja transakcije plaćanja računa
+> 1.1. Trebate imati neku kameru konektovanu na PC
+> 1.2. Možete se spojiti i s telefonom preko aplikacije "iVCam"
+> 2. Generisanje koda će se obaviti automatski nakon izvršenja transakcije plaćanja računa
+> 3. Radi lakšeg testiranja može se koristit bilo koji QR code koji posjedujete
 
-## Za testiranje funkcionalnosti pretplate na izmjenu cjena
-> Treba u desktop aplikaciji dodati popust u odabranom vremenu
-> Ako smo pretplaćeni na uslugu koja je na popustu u odabranom vremenu, kad se logujemo
-> Dobit ćemo notifikaciju za sve pretplaćene usluge na popustu i kolika je njihova cijena
+## Za testiranje funkcionalnosti pretplate na izmjenu cjena i notifikacija
+> 1. Treba u desktop aplikaciji dodati popust u odabranom vremenu
+> 2.1. Ako smo pretplaćeni na uslugu koja je na popustu u odabranom vremenu, kad se logujemo
+> 2.2. Dobit ćemo notifikaciju za sve pretplaćene usluge na popustu i kolika je njihova cijena
