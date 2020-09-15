@@ -1,17 +1,18 @@
 # Stomatološka ordinacija
-# https://github.com/sinansubara/StomatoloskaOrdinacijaDocker
+> https://github.com/sinansubara/StomatoloskaOrdinacijaDocker
 
-# 
+
 # Username: Administrator | Password: test
 # MedicinskoOsoblje | Password: test
 # Stomatolog | Password: test
 # Pacijent | Password: test
-#
+
 #####################################################################################
 # Za testiranje, prvo treba pokrenuti WebApi preko dockera
-# Odraditi "docker-compose build"
-# Nakon toga "docker-compose up"
-# Kada server bude pokrenut, pokrenemo u visual studiu WinUI(Desktop) ili UWP(Mobile) projekt
+> 1. Odraditi "docker-compose build"
+> 2. Nakon toga "docker-compose up"
+> 3. Kada server bude pokrenut, pokrenemo u visual studiu WinUI(Desktop) ili UWP(Mobile) projekt
+
 # Ako se desi error pri pokretanju dockera(docker-compose up), drugi način za testiranje je, da u set startup projects, stavimo API, UWP i WinUI
 # Automatski će se generisati baza podataka na localhostu, bilo da se pokrene preko dockera ili direktno iz visual studia
 ######################################################################################
@@ -33,3 +34,8 @@
 > Trebate imati neku kameru konektovanu na PC, 
 > možete se spojiti i s telefonom preko aplikacije "iVCam"
 > Generisanje koda će se obaviti automatski nakon izvršenja transakcije plaćanja računa
+
+## Za testiranje funkcionalnosti pretplate na izmjenu cjena
+> Treba u desktop aplikaciji dodati popust u odabranom vremenu
+> Ako smo pretplaćeni na uslugu koja je na popustu u odabranom vremenu, kad se logujemo
+> Dobit ćemo notifikaciju za sve pretplaćene usluge na popustu i kolika je njihova cijena
