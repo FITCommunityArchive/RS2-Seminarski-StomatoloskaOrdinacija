@@ -15,6 +15,7 @@
 > 2. Nakon toga "docker-compose up"
 > 3. Kada server bude pokrenut, pokrenemo u visual studiu WinUI(Desktop) ili UWP(Mobile) projekt
 
+## Zna se desiti prilikom pokretanja "docker-compose up" komande, da se pokušava pokrenuti api prije nego što je završilo pokretanje sql servera(ovo se dešava kod sporijih računara jer se pokrene skripta za api, a sql još nije do kraja pokrenut), samo treba pričekati da se pokrene potpuno sql server(20-30 sekundi) i API će se odmah pokrenut poslije toga
 ## Ako se desi error pri pokretanju dockera(docker-compose up), drugi način za testiranje je, da u set startup projects, stavimo API, UWP i WinUI
 > Automatski će se generisati baza podataka na localhostu, bilo da se pokrene preko dockera ili direktno iz visual studia
 
