@@ -35,7 +35,7 @@
 > 2. Izbaremo račun koji želimo platit i popunimo formu
 > 3. Koristiti kartice samo sa ovog linka https://stripe.com/docs/testing#international-cards
 > 3. Samo one su validne za testiranje ove funkcionalnosti
-> 4. Poslije toga će se generisati QR code koji treba sačuvati, da bi u ordinaciji(desktop dijelu) skenirali taj code\\
+> 4. Poslije toga će se generisati QR code koji treba sačuvati, da bi u ordinaciji(desktop dijelu) skenirali taj code\
 > * Račun je moguće platiti naravno direkt u ordinaciji, to obavlja medicinsko osoblje u WinUI aplikaciji u sekciji računi, pritiskom na dugme "naplati i printaj račun" se generiše prozor za pregled računa i mogućnost exporta u razne formate, excel, pdf, a naravno može se iz tog prozora, uradit print preview i print računa
 
 ## Za testiranje funkcionalnosti Skeniranje QR Code
@@ -46,5 +46,5 @@
 
 ## Za testiranje funkcionalnosti pretplate na izmjenu cjena i notifikacija
 > 1. Treba u desktop aplikaciji dodati popust u odabranom vremenu
-> 2. Ako smo pretplaćeni na uslugu koja je na popustu u odabranom vremenu, kad se logujemo
-> 2. Dobit ćemo notifikaciju za sve pretplaćene usluge na popustu i kolika je njihova cijena
+> 2. Ako smo pretplaćeni na uslugu koja je na popustu u odabranom vremenu, kad se logujemo,\
+> dobit ćemo notifikaciju za sve pretplaćene usluge na popustu i kolika je njihova cijena
